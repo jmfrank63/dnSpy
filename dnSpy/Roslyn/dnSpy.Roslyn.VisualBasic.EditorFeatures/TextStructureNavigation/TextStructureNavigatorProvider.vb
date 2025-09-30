@@ -31,7 +31,7 @@ Namespace Global.dnSpy.Roslyn.VisualBasic.EditorFeatures.TextStructureNavigation
 			Return trivia.IsKind(SyntaxKind.CommentTrivia)
 		End Function
 
-		Protected Overrides Function IsWithinNaturalLanguage(token As SyntaxToken, position As Integer) As Boolean
+		Protected Function IsWithinNaturalLanguage(token As SyntaxToken, position As Integer) As Boolean
 			Select Case token.Kind
 				Case SyntaxKind.StringLiteralToken
 					' This, in combination with the override of GetExtentOfWordFromToken() below, treats the closing
@@ -58,7 +58,7 @@ Namespace Global.dnSpy.Roslyn.VisualBasic.EditorFeatures.TextStructureNavigation
 			Return False
 		End Function
 
-		Protected Overrides Function GetExtentOfWordFromToken(token As SyntaxToken, position As SnapshotPoint) As TextExtent
+		Protected Overrides Function GetExtentOfWordFromToken(naturalLanguageNavigator As ITextStructureNavigator, token As SyntaxToken, position As SnapshotPoint) As TextExtent
 			If token.IsKind(SyntaxKind.StringLiteralToken) AndAlso position.Position = token.Span.End - 1 AndAlso token.Text.EndsWith("""", StringComparison.Ordinal) Then
 				' Special case to treat the closing quote of a string literal as a separate token.  This allows the
 				' cursor to stop during word navigation (Ctrl+LeftArrow, etc.) immediately before AND after the
@@ -66,7 +66,8 @@ Namespace Global.dnSpy.Roslyn.VisualBasic.EditorFeatures.TextStructureNavigation
 				Dim Span = New Span(position.Position, 1)
 				Return New TextExtent(New SnapshotSpan(position.Snapshot, Span), isSignificant:=True)
 			Else
-				Return MyBase.GetExtentOfWordFromToken(token, position)
+				' Provide default implementation since this is a MustOverride method
+				Return naturalLanguageNavigator.GetExtentOfWord(position)
 			End If
 		End Function
 	End Class

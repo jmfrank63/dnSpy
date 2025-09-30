@@ -21,7 +21,7 @@ Namespace Global.dnSpy.Roslyn.VisualBasic.Internal.SmartIndent
 			_indentStyle = indentStyle
 		End Sub
 
-		Public Overrides Sub AddSuppressOperationsSlow(list As List(Of SuppressOperation), node As SyntaxNode, ByRef nextOperation As NextSuppressOperationAction)
+		Public Sub AddSuppressOperationsSlow(list As List(Of SuppressOperation), node As SyntaxNode, ByRef nextOperation As NextSuppressOperationAction)
 			' don't suppress anything
 		End Sub
 

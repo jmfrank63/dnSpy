@@ -209,7 +209,7 @@ namespace dnSpy.BackgroundImage.Dialog {
 			topMarginHeightPercentVM = new DoubleVM(a => { if (!topMarginHeightPercentVM!.HasError) currentItem!.RawSettings.TopMarginHeightPercent = FilterMarginPercent(topMarginHeightPercentVM.Value); });
 			bottomMarginHeightPercentVM = new DoubleVM(a => { if (!bottomMarginHeightPercentVM!.HasError) currentItem!.RawSettings.BottomMarginHeightPercent = FilterMarginPercent(bottomMarginHeightPercentVM.Value); });
 			maxHeightVM = new DoubleVM(a => { if (!maxHeightVM!.HasError) currentItem!.RawSettings.MaxHeight = FilterLength(maxHeightVM.Value); });
-			maxWidthVM = new DoubleVM(a => { if (!maxWidthVM!.HasError) currentItem!.RawSettings.MaxWidth = FilterLength(maxWidthVM.Value); });
+		 maxWidthVM = new DoubleVM(a => { if (!maxWidthVM!.HasError) currentItem!.RawSettings.MaxWidth = FilterLength(maxWidthVM.Value); });
 			zoomVM = new DoubleVM(a => { if (!zoomVM!.HasError) currentItem!.RawSettings.Zoom = FilterZoom(zoomVM.Value); });
 			intervalVM = new DefaultConverterVM<TimeSpan>(a => { if (!intervalVM!.HasError) currentItem!.RawSettings.Interval = intervalVM.Value; });
 			CurrentItem = Settings.FirstOrDefault(a => a.Id == backgroundImageSettingsService.LastSelectedId) ?? Settings[0];
@@ -286,8 +286,9 @@ namespace dnSpy.BackgroundImage.Dialog {
 		void PickDirectory() => AddToImages(new[] { pickDirectory.GetDirectory(GetLastDirectory()) });
 
 		string? GetLastDirectory() {
-			foreach (var t in Images.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).Reverse()) {
-				var f = t.Trim();
+			var lines = Images.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+			for (int i = lines.Length - 1; i >= 0; i--) {
+				var f = lines[i].Trim();
 				if (Directory.Exists(f))
 					return f;
 				if (File.Exists(f)) {
@@ -343,7 +344,7 @@ namespace dnSpy.BackgroundImage.Dialog {
 		}
 
 		public RawSettings GetUpdatedRawSettings() {
-			RawSettings.Images = Images.Split(LineConstants.newLineChars).Select(a => a.Trim()).Where(a => !string.IsNullOrEmpty(a)).ToArray();
+			RawSettings.Images = Images.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(a => a.Trim()).Where(a => !string.IsNullOrEmpty(a)).ToArray();
 			return RawSettings;
 		}
 	}
