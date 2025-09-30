@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETFramework,Version=v4.8": {
+      "dnlib": {
+        "type": "Transitive",
+        "resolved": "4.5.0",
+        "contentHash": "YkwstIbjyiJ12uGIAN8oSmImgVFkPHit7MJXPHvJqeKV1DMNqxZWszjHfykgiSs4Y/XmjnZts7pI2/AYme5/uA=="
+      },
+      "Microsoft.VisualStudio.CoreUtility": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "zteI/2y13GcSVEr7PDRrShEu/7xbSH9HIKIeH/syaldjsi+I7iLrh/FSu+ErBoNvHgcU7WnXY3l8VKsA5JxC+g=="
+      },
+      "Microsoft.VisualStudio.Language.Intellisense": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "OYi2RbIBNxNMms8uaOtEXuEB4mEgEmSvBwh3S+C2G35l7+wLAICa/UC6CZxf1rVwCRiyRS9Uv9Gs7Z4n+mmbXw==",
+        "dependencies": {
+          "Microsoft.VisualStudio.Text.UI": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.Data": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "HCtsfpb1BH3q7f6rszkpA09JTF4lgx8BCZxOM2L+AB+j4bgtq1GoN4WOUSBgJamEtmU2moiXFQumEtZEFvaAxA==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.Logic": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "Dx2D7gsGzrFCCacVxgEfwPypUoOy3pc1EamF9RapOjMKQEfgYaOewRDeZ+qgQowe8CKB7GVi7RvOXVUQObedcg==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Data": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.UI": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "LUR3tY1bTf6NchU8kC/JTLI+Mr81fpxvmxrdoXiS6vtuZHSwnA4fQbMLchTFdLDGeX2gvDBHRIa9AJew5gvmOg==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Data": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Logic": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.UI.Wpf": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "lUSExNfNKTM/Ym0m1NPJPB7fFZ8IH5xO+g25+cEH+j0P/0Fo92nOBdocVzh9u28VoYAQ+QkjnxhiKPb1pEJnZA==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Data": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Logic": "15.5.27130",
+          "Microsoft.VisualStudio.Text.UI": "15.5.27130"
+        }
+      },
+      "NuGet.Common": {
+        "type": "Transitive",
+        "resolved": "6.10.0",
+        "contentHash": "ujuzfDwUylDALwZmqRi7I5Jx4E9/8vR2c0Hq8zRj8zCkR8KarSp84WPJ2uE/qwAOjpBYGek06wWgGJ3ABQ/WxA==",
+        "dependencies": {
+          "NuGet.Frameworks": "6.10.0"
+        }
+      },
+      "NuGet.Configuration": {
+        "type": "Transitive",
+        "resolved": "6.10.0",
+        "contentHash": "PbtCCdFC/K3GG3fdstIIMVraiXcxC1IgnzqayowckSlIg2xSxvcqAWd5Z7G1V6st5JzJi9THSnvmy/kchwh80A==",
+        "dependencies": {
+          "NuGet.Common": "6.10.0"
+        }
+      },
+      "NuGet.Frameworks": {
+        "type": "Transitive",
+        "resolved": "6.10.0",
+        "contentHash": "bKaC87Q8rxK7ozFN9Eyo0YVUmd4r2s8pbNxHI7sHRqL16OAP0yEdCU5wpDkG9cKLHpZCahgoQUfAVC0UadVU+A=="
+      },
+      "Ookii.Dialogs.Wpf": {
+        "type": "Transitive",
+        "resolved": "5.0.1",
+        "contentHash": "iZNnZwqTpK0cfR0vkotncP1c025/PHlIdzc7iEKBYwhVv1V0zXp9/RT/O0kMhsmlwXqRxxbE4pdhfinbJXtjPg=="
+      },
+      "System.ComponentModel.Composition": {
+        "type": "Transitive",
+        "resolved": "8.0.0",
+        "contentHash": "bGhUX5BTivJ9Wax0qnJy7uGq7dn/TQkEpJ2Fpu1etg8dbPwyDkUzNPc1d3I2/jUr9y4wDI3a1dkSmi8X21Pzbw=="
+      },
+      "dnspy.contracts.debugger": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.VisualStudio.Text.UI.Wpf": "[15.5.27130, )",
+          "dnSpy.Contracts.DnSpy": "[6.5.1, )",
+          "dnSpy.Contracts.Logic": "[6.5.1, )"
+        }
+      },
+      "dnspy.contracts.debugger.dotnet": {
+        "type": "Project",
+        "dependencies": {
+          "dnSpy.Contracts.Debugger": "[6.5.1, )",
+          "dnSpy.Contracts.DnSpy": "[6.5.1, )",
+          "dnSpy.Contracts.Logic": "[6.5.1, )",
+          "dnSpy.Debugger.DotNet.Metadata": "[6.5.1, )"
+        }
+      },
+      "dnspy.contracts.dnspy": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.VisualStudio.Language.Intellisense": "[15.5.27130, )",
+          "Microsoft.VisualStudio.Text.UI.Wpf": "[15.5.27130, )",
+          "Ookii.Dialogs.Wpf": "[5.0.1, )",
+          "System.ComponentModel.Composition": "[8.0.0, )",
+          "dnSpy.Contracts.Logic": "[6.5.1, )"
+        }
+      },
+      "dnspy.contracts.logic": {
+        "type": "Project",
+        "dependencies": {
+          "NuGet.Configuration": "[6.10.0, )",
+          "dnlib": "[4.5.0, )"
+        }
+      },
+      "dnspy.debugger.dotnet.metadata": {
+        "type": "Project",
+        "dependencies": {
+          "dnlib": "[4.5.0, )"
+        }
+      }
+    },
+    "net8.0-windows7.0": {
+      "dnlib": {
+        "type": "Transitive",
+        "resolved": "4.5.0",
+        "contentHash": "YkwstIbjyiJ12uGIAN8oSmImgVFkPHit7MJXPHvJqeKV1DMNqxZWszjHfykgiSs4Y/XmjnZts7pI2/AYme5/uA=="
+      },
+      "Microsoft.VisualStudio.CoreUtility": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "zteI/2y13GcSVEr7PDRrShEu/7xbSH9HIKIeH/syaldjsi+I7iLrh/FSu+ErBoNvHgcU7WnXY3l8VKsA5JxC+g=="
+      },
+      "Microsoft.VisualStudio.Language.Intellisense": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "OYi2RbIBNxNMms8uaOtEXuEB4mEgEmSvBwh3S+C2G35l7+wLAICa/UC6CZxf1rVwCRiyRS9Uv9Gs7Z4n+mmbXw==",
+        "dependencies": {
+          "Microsoft.VisualStudio.Text.UI": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.Data": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "HCtsfpb1BH3q7f6rszkpA09JTF4lgx8BCZxOM2L+AB+j4bgtq1GoN4WOUSBgJamEtmU2moiXFQumEtZEFvaAxA==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.Logic": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "Dx2D7gsGzrFCCacVxgEfwPypUoOy3pc1EamF9RapOjMKQEfgYaOewRDeZ+qgQowe8CKB7GVi7RvOXVUQObedcg==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Data": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.UI": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "LUR3tY1bTf6NchU8kC/JTLI+Mr81fpxvmxrdoXiS6vtuZHSwnA4fQbMLchTFdLDGeX2gvDBHRIa9AJew5gvmOg==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Data": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Logic": "15.5.27130"
+        }
+      },
+      "Microsoft.VisualStudio.Text.UI.Wpf": {
+        "type": "Transitive",
+        "resolved": "15.5.27130",
+        "contentHash": "lUSExNfNKTM/Ym0m1NPJPB7fFZ8IH5xO+g25+cEH+j0P/0Fo92nOBdocVzh9u28VoYAQ+QkjnxhiKPb1pEJnZA==",
+        "dependencies": {
+          "Microsoft.VisualStudio.CoreUtility": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Data": "15.5.27130",
+          "Microsoft.VisualStudio.Text.Logic": "15.5.27130",
+          "Microsoft.VisualStudio.Text.UI": "15.5.27130"
+        }
+      },
+      "NuGet.Common": {
+        "type": "Transitive",
+        "resolved": "6.10.0",
+        "contentHash": "ujuzfDwUylDALwZmqRi7I5Jx4E9/8vR2c0Hq8zRj8zCkR8KarSp84WPJ2uE/qwAOjpBYGek06wWgGJ3ABQ/WxA==",
+        "dependencies": {
+          "NuGet.Frameworks": "6.10.0"
+        }
+      },
+      "NuGet.Configuration": {
+        "type": "Transitive",
+        "resolved": "6.10.0",
+        "contentHash": "PbtCCdFC/K3GG3fdstIIMVraiXcxC1IgnzqayowckSlIg2xSxvcqAWd5Z7G1V6st5JzJi9THSnvmy/kchwh80A==",
+        "dependencies": {
+          "NuGet.Common": "6.10.0",
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        }
+      },
+      "NuGet.Frameworks": {
+        "type": "Transitive",
+        "resolved": "6.10.0",
+        "contentHash": "bKaC87Q8rxK7ozFN9Eyo0YVUmd4r2s8pbNxHI7sHRqL16OAP0yEdCU5wpDkG9cKLHpZCahgoQUfAVC0UadVU+A=="
+      },
+      "Ookii.Dialogs.Wpf": {
+        "type": "Transitive",
+        "resolved": "5.0.1",
+        "contentHash": "iZNnZwqTpK0cfR0vkotncP1c025/PHlIdzc7iEKBYwhVv1V0zXp9/RT/O0kMhsmlwXqRxxbE4pdhfinbJXtjPg=="
+      },
+      "System.ComponentModel.Composition": {
+        "type": "Transitive",
+        "resolved": "8.0.0",
+        "contentHash": "bGhUX5BTivJ9Wax0qnJy7uGq7dn/TQkEpJ2Fpu1etg8dbPwyDkUzNPc1d3I2/jUr9y4wDI3a1dkSmi8X21Pzbw=="
+      },
+      "System.Security.Cryptography.ProtectedData": {
+        "type": "Transitive",
+        "resolved": "4.4.0",
+        "contentHash": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog=="
+      },
+      "dnspy.contracts.debugger": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.VisualStudio.Text.UI.Wpf": "[15.5.27130, )",
+          "dnSpy.Contracts.DnSpy": "[6.5.1, )",
+          "dnSpy.Contracts.Logic": "[6.5.1, )"
+        }
+      },
+      "dnspy.contracts.debugger.dotnet": {
+        "type": "Project",
+        "dependencies": {
+          "dnSpy.Contracts.Debugger": "[6.5.1, )",
+          "dnSpy.Contracts.DnSpy": "[6.5.1, )",
+          "dnSpy.Contracts.Logic": "[6.5.1, )",
+          "dnSpy.Debugger.DotNet.Metadata": "[6.5.1, )"
+        }
+      },
+      "dnspy.contracts.dnspy": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.VisualStudio.Language.Intellisense": "[15.5.27130, )",
+          "Microsoft.VisualStudio.Text.UI.Wpf": "[15.5.27130, )",
+          "Ookii.Dialogs.Wpf": "[5.0.1, )",
+          "System.ComponentModel.Composition": "[8.0.0, )",
+          "dnSpy.Contracts.Logic": "[6.5.1, )"
+        }
+      },
+      "dnspy.contracts.logic": {
+        "type": "Project",
+        "dependencies": {
+          "NuGet.Configuration": "[6.10.0, )",
+          "dnlib": "[4.5.0, )"
+        }
+      },
+      "dnspy.debugger.dotnet.metadata": {
+        "type": "Project",
+        "dependencies": {
+          "dnlib": "[4.5.0, )"
+        }
+      }
+    }
+  }
+}

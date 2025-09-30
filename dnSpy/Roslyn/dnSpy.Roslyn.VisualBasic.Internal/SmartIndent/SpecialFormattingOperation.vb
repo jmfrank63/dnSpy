@@ -21,11 +21,11 @@ Namespace Global.dnSpy.Roslyn.VisualBasic.Internal.SmartIndent
 			_indentStyle = indentStyle
 		End Sub
 
-		Public Sub AddSuppressOperationsSlow(list As List(Of SuppressOperation), node As SyntaxNode, ByRef nextOperation As NextSuppressOperationAction)
-			' don't suppress anything
-		End Sub
+        Public Shadows Sub AddSuppressOperationsSlow(list As List(Of SuppressOperation), node As SyntaxNode, ByRef nextOperation As NextSuppressOperationAction)
+            ' don't suppress anything
+        End Sub
 
-		Public Overrides Function GetAdjustNewLinesOperationSlow(ByRef previousToken As SyntaxToken, ByRef currentToken As SyntaxToken, ByRef nextOperation As NextGetAdjustNewLinesOperation) As AdjustNewLinesOperation
+        Public Overrides Function GetAdjustNewLinesOperationSlow(ByRef previousToken As SyntaxToken, ByRef currentToken As SyntaxToken, ByRef nextOperation As NextGetAdjustNewLinesOperation) As AdjustNewLinesOperation
 
 			' unlike regular one. force position of attribute
 			Dim attributeNode = TryCast(previousToken.Parent, AttributeListSyntax)

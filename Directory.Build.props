@@ -1,2 +1,21 @@
 <Project>
+  <PropertyGroup>
+    <!-- Fix MSBuild task errors by enforcing explicit ordering -->
+    <MSBuildDisableFastUpToDateCheck>true</MSBuildDisableFastUpToDateCheck>
+    
+    <!-- Disable parallel builds during problematic scenarios -->
+    <BuildInParallel Condition="'$(BuildingInsideVisualStudio)' != 'true' and '$(ContinuousIntegrationBuild)' != 'true'">false</BuildInParallel>
+    
+    <!-- Force more consistent behavior -->
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    
+    <!-- Suppress version conflict warnings since they're resolved automatically -->
+    <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);MSB3277</MSBuildWarningsAsMessages>
+    
+    <!-- Avoid System.Collections.Immutable version conflicts -->
+    <DisableImplicitFrameworkReferences>false</DisableImplicitFrameworkReferences>
+    
+    <!-- Auto-unify assembly references -->
+    <AutoUnifyAssemblyReferences Condition="'$(AutoUnifyAssemblyReferences)' == ''">true</AutoUnifyAssemblyReferences>
+  </PropertyGroup>
 </Project>

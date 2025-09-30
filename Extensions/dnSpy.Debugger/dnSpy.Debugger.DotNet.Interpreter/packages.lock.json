@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETFramework,Version=v4.8": {
+      "dnlib": {
+        "type": "Transitive",
+        "resolved": "4.5.0",
+        "contentHash": "YkwstIbjyiJ12uGIAN8oSmImgVFkPHit7MJXPHvJqeKV1DMNqxZWszjHfykgiSs4Y/XmjnZts7pI2/AYme5/uA=="
+      },
+      "dnspy.debugger.dotnet.metadata": {
+        "type": "Project",
+        "dependencies": {
+          "dnlib": "[4.5.0, )"
+        }
+      }
+    },
+    "net8.0-windows7.0": {
+      "dnlib": {
+        "type": "Transitive",
+        "resolved": "4.5.0",
+        "contentHash": "YkwstIbjyiJ12uGIAN8oSmImgVFkPHit7MJXPHvJqeKV1DMNqxZWszjHfykgiSs4Y/XmjnZts7pI2/AYme5/uA=="
+      },
+      "dnspy.debugger.dotnet.metadata": {
+        "type": "Project",
+        "dependencies": {
+          "dnlib": "[4.5.0, )"
+        }
+      }
+    }
+  }
+}
