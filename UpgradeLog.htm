@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          Migration Report
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Migration Report - dnSpy</h1><div id="content"><h2 _locID="OverviewTitle">Overview</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Project</th><th _locID="PathTableHeader">Path</th><th _locID="ErrorsTableHeader">Errors</th><th _locID="WarningsTableHeader">Warnings</th><th _locID="MessagesTableHeader">Messages</th></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#Solution"><span _locID="OverviewSolutionSpan">Solution</span></a></strong></td><td>dnSpy.sln</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#SolutionWarning">1</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Solution'); return false;">2</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#AppHostInfoGenerator">AppHostInfoGenerator</a></strong></td><td>Extensions\dnSpy.Debugger\AppHostInfoGenerator\AppHostInfoGenerator.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#AppHostPatcher">AppHostPatcher</a></strong></td><td>Build\AppHostPatcher\AppHostPatcher.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#BasicExpressionCompiler">BasicExpressionCompiler</a></strong></td><td>dnSpy\Roslyn\Roslyn.ExpressionCompiler\VisualBasic\BasicExpressionCompiler\BasicExpressionCompiler.vbproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Build">Build</a></strong></td><td>Build</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ConvertToNetstandardReferences">ConvertToNetstandardReferences</a></strong></td><td>Build\ConvertToNetstandardReferences\ConvertToNetstandardReferences.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#CSharpExpressionCompiler">CSharpExpressionCompiler</a></strong></td><td>dnSpy\Roslyn\Roslyn.ExpressionCompiler\CSharp\CSharpExpressionCompiler\CSharpExpressionCompiler.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy">dnSpy</a></strong></td><td>dnSpy</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Analyzer">dnSpy.Analyzer</a></strong></td><td>Extensions\dnSpy.Analyzer\dnSpy.Analyzer.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.AsmEditor">dnSpy.AsmEditor</a></strong></td><td>Extensions\dnSpy.AsmEditor\dnSpy.AsmEditor.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.BamlDecompiler">dnSpy.BamlDecompiler</a></strong></td><td>Extensions\dnSpy.BamlDecompiler\dnSpy.BamlDecompiler.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Console">dnSpy.Console</a></strong></td><td>dnSpy\dnSpy.Console\dnSpy.Console.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Contracts.Debugger">dnSpy.Contracts.Debugger</a></strong></td><td>dnSpy\dnSpy.Contracts.Debugger\dnSpy.Contracts.Debugger.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Contracts.Debugger.DotNet">dnSpy.Contracts.Debugger.DotNet</a></strong></td><td>dnSpy\dnSpy.Contracts.Debugger.DotNet\dnSpy.Contracts.Debugger.DotNet.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Contracts.Debugger.DotNet.CorDebug">dnSpy.Contracts.Debugger.DotNet.CorDebug</a></strong></td><td>dnSpy\dnSpy.Contracts.Debugger.DotNet.CorDebug\dnSpy.Contracts.Debugger.DotNet.CorDebug.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Contracts.Debugger.DotNet.Mono">dnSpy.Contracts.Debugger.DotNet.Mono</a></strong></td><td>dnSpy\dnSpy.Contracts.Debugger.DotNet.Mono\dnSpy.Contracts.Debugger.DotNet.Mono.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Contracts.DnSpy">dnSpy.Contracts.DnSpy</a></strong></td><td>dnSpy\dnSpy.Contracts.DnSpy\dnSpy.Contracts.DnSpy.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Contracts.Logic">dnSpy.Contracts.Logic</a></strong></td><td>dnSpy\dnSpy.Contracts.Logic\dnSpy.Contracts.Logic.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Debugger">dnSpy.Debugger</a></strong></td><td>dnSpy.Debugger</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Debugger.DotNet">dnSpy.Debugger.DotNet</a></strong></td><td>Extensions\dnSpy.Debugger\dnSpy.Debugger.DotNet\dnSpy.Debugger.DotNet.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Debugger.DotNet.CorDebug">dnSpy.Debugger.DotNet.CorDebug</a></strong></td><td>Extensions\dnSpy.Debugger\dnSpy.Debugger.DotNet.CorDebug\dnSpy.Debugger.DotNet.CorDebug.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Debugger.DotNet.Interpreter">dnSpy.Debugger.DotNet.Interpreter</a></strong></td><td>Extensions\dnSpy.Debugger\dnSpy.Debugger.DotNet.Interpreter\dnSpy.Debugger.DotNet.Interpreter.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Debugger.DotNet.Metadata">dnSpy.Debugger.DotNet.Metadata</a></strong></td><td>Extensions\dnSpy.Debugger\dnSpy.Debugger.DotNet.Metadata\dnSpy.Debugger.DotNet.Metadata.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Debugger.DotNet.Mono">dnSpy.Debugger.DotNet.Mono</a></strong></td><td>Extensions\dnSpy.Debugger\dnSpy.Debugger.DotNet.Mono\dnSpy.Debugger.DotNet.Mono.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Decompiler">dnSpy.Decompiler</a></strong></td><td>dnSpy\dnSpy.Decompiler\dnSpy.Decompiler.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Decompiler.ILSpy">dnSpy.Decompiler.ILSpy</a></strong></td><td>Extensions\ILSpy.Decompiler\dnSpy.Decompiler.ILSpy\dnSpy.Decompiler.ILSpy.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Decompiler.ILSpy.Core">dnSpy.Decompiler.ILSpy.Core</a></strong></td><td>Extensions\ILSpy.Decompiler\dnSpy.Decompiler.ILSpy.Core\dnSpy.Decompiler.ILSpy.Core.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Images">dnSpy.Images</a></strong></td><td>dnSpy\dnSpy.Images\dnSpy.Images.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Roslyn">dnSpy.Roslyn</a></strong></td><td>dnSpy\Roslyn\dnSpy.Roslyn\dnSpy.Roslyn.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Roslyn.CSharp.EditorFeatures">dnSpy.Roslyn.CSharp.EditorFeatures</a></strong></td><td>dnSpy\Roslyn\dnSpy.Roslyn.CSharp.EditorFeatures\dnSpy.Roslyn.CSharp.EditorFeatures.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Roslyn.CSharp.Internal">dnSpy.Roslyn.CSharp.Internal</a></strong></td><td>dnSpy\Roslyn\dnSpy.Roslyn.CSharp.Internal\dnSpy.Roslyn.CSharp.Internal.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Roslyn.EditorFeatures">dnSpy.Roslyn.EditorFeatures</a></strong></td><td>dnSpy\Roslyn\dnSpy.Roslyn.EditorFeatures\dnSpy.Roslyn.EditorFeatures.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Roslyn.Internal">dnSpy.Roslyn.Internal</a></strong></td><td>dnSpy\Roslyn\dnSpy.Roslyn.Internal\dnSpy.Roslyn.Internal.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Roslyn.VisualBasic.EditorFeatures">dnSpy.Roslyn.VisualBasic.EditorFeatures</a></strong></td><td>dnSpy\Roslyn\dnSpy.Roslyn.VisualBasic.EditorFeatures\dnSpy.Roslyn.VisualBasic.EditorFeatures.vbproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Roslyn.VisualBasic.Internal">dnSpy.Roslyn.VisualBasic.Internal</a></strong></td><td>dnSpy\Roslyn\dnSpy.Roslyn.VisualBasic.Internal\dnSpy.Roslyn.VisualBasic.Internal.vbproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy.Scripting.Roslyn">dnSpy.Scripting.Roslyn</a></strong></td><td>Extensions\dnSpy.Scripting.Roslyn\dnSpy.Scripting.Roslyn.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#dnSpy-x86">dnSpy-x86</a></strong></td><td>dnSpy\dnSpy-x86\dnSpy-x86.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Example1.Extension">Example1.Extension</a></strong></td><td>Extensions\Examples\Example1.Extension\Example1.Extension.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Example2.Extension">Example2.Extension</a></strong></td><td>Extensions\Examples\Example2.Extension\Example2.Extension.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Examples">Examples</a></strong></td><td>Examples</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ExpressionCompiler">ExpressionCompiler</a></strong></td><td>ExpressionCompiler</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Extensions">Extensions</a></strong></td><td>Extensions</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ICSharpCode.Decompiler">ICSharpCode.Decompiler</a></strong></td><td>Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler\ICSharpCode.Decompiler.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ICSharpCode.NRefactory">ICSharpCode.NRefactory</a></strong></td><td>Extensions\ILSpy.Decompiler\NRefactory\ICSharpCode.NRefactory\ICSharpCode.NRefactory.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ICSharpCode.NRefactory.CSharp">ICSharpCode.NRefactory.CSharp</a></strong></td><td>Extensions\ILSpy.Decompiler\NRefactory\ICSharpCode.NRefactory.CSharp\ICSharpCode.NRefactory.CSharp.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ICSharpCode.NRefactory.VB">ICSharpCode.NRefactory.VB</a></strong></td><td>Extensions\ILSpy.Decompiler\ICSharpCode.Decompiler\NRefactory.VB\ICSharpCode.NRefactory.VB\ICSharpCode.NRefactory.VB.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ICSharpCode.TreeView">ICSharpCode.TreeView</a></strong></td><td>Libraries\ICSharpCode.TreeView\ICSharpCode.TreeView.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#ILSpy.Decompiler">ILSpy.Decompiler</a></strong></td><td>ILSpy.Decompiler</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Libraries">Libraries</a></strong></td><td>Libraries</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#MakeEverythingPublic">MakeEverythingPublic</a></strong></td><td>Build\MakeEverythingPublic\MakeEverythingPublic.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Mono.Debugger.Soft">Mono.Debugger.Soft</a></strong></td><td>Extensions\dnSpy.Debugger\Mono.Debugger.Soft\Mono.Debugger.Soft.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Roslyn">Roslyn</a></strong></td><td>Roslyn</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#">0</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solution and projects</h2><div id="messages"><a name="Solution" /><h3 _locID="ProjectDisplayNameHeader">Solution</h3><table><tr id="SolutionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassSolution"><td class="IconWarningEncoded"><a name="SolutionWarning" /></td><td class="messageCell"><strong>dnSpy.sln:
+        </strong><span>Visual Studio needs to make non-functional changes to this project in order to enable the project to open in released versions of Visual Studio newer than Visual Studio 2010 SP1 without impacting project behavior.</span></td></tr><tr name="MessageRowHeaderShowSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Show 2 additional messages
+        </a></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>dnSpy.sln:
+        </strong><span>File successfully backed up as C:\Users\jmfra\Projects\akplayer\dnSpy\Backup\dnSpy.sln</span></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>dnSpy.sln:
+        </strong><span>Solution migrated successfully</span></td></tr><tr style="display: none" name="MessageRowHeaderHideSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Hide 2 additional messages
+        </a></td></tr></table><a name="AppHostInfoGenerator" /><h3>AppHostInfoGenerator</h3><table><tr id="AppHostInfoGeneratorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">AppHostInfoGenerator logged no messages.
+                  </td></tr></table><a name="AppHostPatcher" /><h3>AppHostPatcher</h3><table><tr id="AppHostPatcherHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">AppHostPatcher logged no messages.
+                  </td></tr></table><a name="BasicExpressionCompiler" /><h3>BasicExpressionCompiler</h3><table><tr id="BasicExpressionCompilerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">BasicExpressionCompiler logged no messages.
+                  </td></tr></table><a name="Build" /><h3>Build</h3><table><tr id="BuildHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Build logged no messages.
+                  </td></tr></table><a name="ConvertToNetstandardReferences" /><h3>ConvertToNetstandardReferences</h3><table><tr id="ConvertToNetstandardReferencesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ConvertToNetstandardReferences logged no messages.
+                  </td></tr></table><a name="CSharpExpressionCompiler" /><h3>CSharpExpressionCompiler</h3><table><tr id="CSharpExpressionCompilerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">CSharpExpressionCompiler logged no messages.
+                  </td></tr></table><a name="dnSpy" /><h3>dnSpy</h3><table><tr id="dnSpyHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy logged no messages.
+                  </td></tr></table><a name="dnSpy.Analyzer" /><h3>dnSpy.Analyzer</h3><table><tr id="dnSpy.AnalyzerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Analyzer logged no messages.
+                  </td></tr></table><a name="dnSpy.AsmEditor" /><h3>dnSpy.AsmEditor</h3><table><tr id="dnSpy.AsmEditorHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.AsmEditor logged no messages.
+                  </td></tr></table><a name="dnSpy.BamlDecompiler" /><h3>dnSpy.BamlDecompiler</h3><table><tr id="dnSpy.BamlDecompilerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.BamlDecompiler logged no messages.
+                  </td></tr></table><a name="dnSpy.Console" /><h3>dnSpy.Console</h3><table><tr id="dnSpy.ConsoleHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Console logged no messages.
+                  </td></tr></table><a name="dnSpy.Contracts.Debugger" /><h3>dnSpy.Contracts.Debugger</h3><table><tr id="dnSpy.Contracts.DebuggerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Contracts.Debugger logged no messages.
+                  </td></tr></table><a name="dnSpy.Contracts.Debugger.DotNet" /><h3>dnSpy.Contracts.Debugger.DotNet</h3><table><tr id="dnSpy.Contracts.Debugger.DotNetHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Contracts.Debugger.DotNet logged no messages.
+                  </td></tr></table><a name="dnSpy.Contracts.Debugger.DotNet.CorDebug" /><h3>dnSpy.Contracts.Debugger.DotNet.CorDebug</h3><table><tr id="dnSpy.Contracts.Debugger.DotNet.CorDebugHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Contracts.Debugger.DotNet.CorDebug logged no messages.
+                  </td></tr></table><a name="dnSpy.Contracts.Debugger.DotNet.Mono" /><h3>dnSpy.Contracts.Debugger.DotNet.Mono</h3><table><tr id="dnSpy.Contracts.Debugger.DotNet.MonoHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Contracts.Debugger.DotNet.Mono logged no messages.
+                  </td></tr></table><a name="dnSpy.Contracts.DnSpy" /><h3>dnSpy.Contracts.DnSpy</h3><table><tr id="dnSpy.Contracts.DnSpyHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Contracts.DnSpy logged no messages.
+                  </td></tr></table><a name="dnSpy.Contracts.Logic" /><h3>dnSpy.Contracts.Logic</h3><table><tr id="dnSpy.Contracts.LogicHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Contracts.Logic logged no messages.
+                  </td></tr></table><a name="dnSpy.Debugger" /><h3>dnSpy.Debugger</h3><table><tr id="dnSpy.DebuggerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Debugger logged no messages.
+                  </td></tr></table><a name="dnSpy.Debugger.DotNet" /><h3>dnSpy.Debugger.DotNet</h3><table><tr id="dnSpy.Debugger.DotNetHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Debugger.DotNet logged no messages.
+                  </td></tr></table><a name="dnSpy.Debugger.DotNet.CorDebug" /><h3>dnSpy.Debugger.DotNet.CorDebug</h3><table><tr id="dnSpy.Debugger.DotNet.CorDebugHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Debugger.DotNet.CorDebug logged no messages.
+                  </td></tr></table><a name="dnSpy.Debugger.DotNet.Interpreter" /><h3>dnSpy.Debugger.DotNet.Interpreter</h3><table><tr id="dnSpy.Debugger.DotNet.InterpreterHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Debugger.DotNet.Interpreter logged no messages.
+                  </td></tr></table><a name="dnSpy.Debugger.DotNet.Metadata" /><h3>dnSpy.Debugger.DotNet.Metadata</h3><table><tr id="dnSpy.Debugger.DotNet.MetadataHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Debugger.DotNet.Metadata logged no messages.
+                  </td></tr></table><a name="dnSpy.Debugger.DotNet.Mono" /><h3>dnSpy.Debugger.DotNet.Mono</h3><table><tr id="dnSpy.Debugger.DotNet.MonoHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Debugger.DotNet.Mono logged no messages.
+                  </td></tr></table><a name="dnSpy.Decompiler" /><h3>dnSpy.Decompiler</h3><table><tr id="dnSpy.DecompilerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Decompiler logged no messages.
+                  </td></tr></table><a name="dnSpy.Decompiler.ILSpy" /><h3>dnSpy.Decompiler.ILSpy</h3><table><tr id="dnSpy.Decompiler.ILSpyHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Decompiler.ILSpy logged no messages.
+                  </td></tr></table><a name="dnSpy.Decompiler.ILSpy.Core" /><h3>dnSpy.Decompiler.ILSpy.Core</h3><table><tr id="dnSpy.Decompiler.ILSpy.CoreHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Decompiler.ILSpy.Core logged no messages.
+                  </td></tr></table><a name="dnSpy.Images" /><h3>dnSpy.Images</h3><table><tr id="dnSpy.ImagesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Images logged no messages.
+                  </td></tr></table><a name="dnSpy.Roslyn" /><h3>dnSpy.Roslyn</h3><table><tr id="dnSpy.RoslynHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Roslyn logged no messages.
+                  </td></tr></table><a name="dnSpy.Roslyn.CSharp.EditorFeatures" /><h3>dnSpy.Roslyn.CSharp.EditorFeatures</h3><table><tr id="dnSpy.Roslyn.CSharp.EditorFeaturesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Roslyn.CSharp.EditorFeatures logged no messages.
+                  </td></tr></table><a name="dnSpy.Roslyn.CSharp.Internal" /><h3>dnSpy.Roslyn.CSharp.Internal</h3><table><tr id="dnSpy.Roslyn.CSharp.InternalHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Roslyn.CSharp.Internal logged no messages.
+                  </td></tr></table><a name="dnSpy.Roslyn.EditorFeatures" /><h3>dnSpy.Roslyn.EditorFeatures</h3><table><tr id="dnSpy.Roslyn.EditorFeaturesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Roslyn.EditorFeatures logged no messages.
+                  </td></tr></table><a name="dnSpy.Roslyn.Internal" /><h3>dnSpy.Roslyn.Internal</h3><table><tr id="dnSpy.Roslyn.InternalHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Roslyn.Internal logged no messages.
+                  </td></tr></table><a name="dnSpy.Roslyn.VisualBasic.EditorFeatures" /><h3>dnSpy.Roslyn.VisualBasic.EditorFeatures</h3><table><tr id="dnSpy.Roslyn.VisualBasic.EditorFeaturesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Roslyn.VisualBasic.EditorFeatures logged no messages.
+                  </td></tr></table><a name="dnSpy.Roslyn.VisualBasic.Internal" /><h3>dnSpy.Roslyn.VisualBasic.Internal</h3><table><tr id="dnSpy.Roslyn.VisualBasic.InternalHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Roslyn.VisualBasic.Internal logged no messages.
+                  </td></tr></table><a name="dnSpy.Scripting.Roslyn" /><h3>dnSpy.Scripting.Roslyn</h3><table><tr id="dnSpy.Scripting.RoslynHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy.Scripting.Roslyn logged no messages.
+                  </td></tr></table><a name="dnSpy-x86" /><h3>dnSpy-x86</h3><table><tr id="dnSpy-x86HeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">dnSpy-x86 logged no messages.
+                  </td></tr></table><a name="Example1.Extension" /><h3>Example1.Extension</h3><table><tr id="Example1.ExtensionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Example1.Extension logged no messages.
+                  </td></tr></table><a name="Example2.Extension" /><h3>Example2.Extension</h3><table><tr id="Example2.ExtensionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Example2.Extension logged no messages.
+                  </td></tr></table><a name="Examples" /><h3>Examples</h3><table><tr id="ExamplesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Examples logged no messages.
+                  </td></tr></table><a name="ExpressionCompiler" /><h3>ExpressionCompiler</h3><table><tr id="ExpressionCompilerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ExpressionCompiler logged no messages.
+                  </td></tr></table><a name="Extensions" /><h3>Extensions</h3><table><tr id="ExtensionsHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Extensions logged no messages.
+                  </td></tr></table><a name="ICSharpCode.Decompiler" /><h3>ICSharpCode.Decompiler</h3><table><tr id="ICSharpCode.DecompilerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ICSharpCode.Decompiler logged no messages.
+                  </td></tr></table><a name="ICSharpCode.NRefactory" /><h3>ICSharpCode.NRefactory</h3><table><tr id="ICSharpCode.NRefactoryHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ICSharpCode.NRefactory logged no messages.
+                  </td></tr></table><a name="ICSharpCode.NRefactory.CSharp" /><h3>ICSharpCode.NRefactory.CSharp</h3><table><tr id="ICSharpCode.NRefactory.CSharpHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ICSharpCode.NRefactory.CSharp logged no messages.
+                  </td></tr></table><a name="ICSharpCode.NRefactory.VB" /><h3>ICSharpCode.NRefactory.VB</h3><table><tr id="ICSharpCode.NRefactory.VBHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ICSharpCode.NRefactory.VB logged no messages.
+                  </td></tr></table><a name="ICSharpCode.TreeView" /><h3>ICSharpCode.TreeView</h3><table><tr id="ICSharpCode.TreeViewHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ICSharpCode.TreeView logged no messages.
+                  </td></tr></table><a name="ILSpy.Decompiler" /><h3>ILSpy.Decompiler</h3><table><tr id="ILSpy.DecompilerHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">ILSpy.Decompiler logged no messages.
+                  </td></tr></table><a name="Libraries" /><h3>Libraries</h3><table><tr id="LibrariesHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Libraries logged no messages.
+                  </td></tr></table><a name="MakeEverythingPublic" /><h3>MakeEverythingPublic</h3><table><tr id="MakeEverythingPublicHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">MakeEverythingPublic logged no messages.
+                  </td></tr></table><a name="Mono.Debugger.Soft" /><h3>Mono.Debugger.Soft</h3><table><tr id="Mono.Debugger.SoftHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Mono.Debugger.Soft logged no messages.
+                  </td></tr></table><a name="Roslyn" /><h3>Roslyn</h3><table><tr id="RoslynHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr><td class="IconInfoEncoded" /><td class="messageCell" _locID="NoMessagesRow">Roslyn logged no messages.
+                  </td></tr></table></div></div></body></html>
