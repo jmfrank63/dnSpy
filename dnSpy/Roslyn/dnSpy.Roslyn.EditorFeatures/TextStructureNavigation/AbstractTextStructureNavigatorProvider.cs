@@ -19,8 +19,8 @@ namespace dnSpy.Roslyn.EditorFeatures.TextStructureNavigation {
 		protected AbstractTextStructureNavigatorProvider(ITextStructureNavigatorSelectorService selectorService,
 			IContentTypeRegistryService contentTypeService,
 			IWaitIndicator waitIndicator) {
-			Contract.ThrowIfNull(selectorService);
-			Contract.ThrowIfNull(contentTypeService);
+			if (selectorService == null) throw new System.ArgumentNullException(nameof(selectorService));
+			if (contentTypeService == null) throw new System.ArgumentNullException(nameof(contentTypeService));
 
 			_selectorService = selectorService;
 			_contentTypeService = contentTypeService;

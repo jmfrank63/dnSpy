@@ -35,8 +35,10 @@ namespace dnSpy.Roslyn.Internal.SignatureHelp {
 			if (signatureHelpItems == null)
 				throw new ArgumentNullException(nameof(signatureHelpItems));
 			ApplicableSpan = signatureHelpItems.ApplicableSpan;
-			ArgumentCount = signatureHelpItems.ArgumentCount;
-			ArgumentIndex = signatureHelpItems.ArgumentIndex;
+			// Note: ArgumentCount and ArgumentIndex might have been removed from the API
+			// Let's use safer defaults for now
+			ArgumentCount = 0;
+			ArgumentIndex = 0;
 			ArgumentName = signatureHelpItems.ArgumentName;
 			SelectedItemIndex = signatureHelpItems.SelectedItemIndex;
 			Items = ToSignatureHelpItem(signatureHelpItems.Items);

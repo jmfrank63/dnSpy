@@ -17,5 +17,30 @@
     
     <!-- Auto-unify assembly references -->
     <AutoUnifyAssemblyReferences Condition="'$(AutoUnifyAssemblyReferences)' == ''">true</AutoUnifyAssemblyReferences>
+    
+    <!-- Support for x86 builds -->
+    <DnSpyRuntimeIdentifiers Condition="'$(DnSpyRuntimeIdentifiers)' == ''">win-x64;win-x86</DnSpyRuntimeIdentifiers>
+  </PropertyGroup>
+  
+  <!-- Platform-specific configurations -->
+  <PropertyGroup Condition="'$(Platform)' == 'x86' Or '$(RuntimeIdentifier)' == 'win-x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DefineConstants>$(DefineConstants);X86</DefineConstants>
+    <OutputPath>bin\x86\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Platform)' == 'x64' Or '$(RuntimeIdentifier)' == 'win-x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>$(DefineConstants);X64</DefineConstants>
+    <OutputPath>bin\x64\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Platform)' == 'AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DefineConstants>$(DefineConstants);X86</DefineConstants>
+    <OutputPath>bin\x86\$(Configuration)\</OutputPath>
   </PropertyGroup>
 </Project>

@@ -29,7 +29,6 @@ namespace dnSpy.Roslyn.Internal.SignatureHelp {
 			ISignatureHelpProvider[] providers,
 			int caretPosition,
 			SIGHLP.SignatureHelpTriggerInfo triggerInfo,
-			SignatureHelpOptions options,
 			Document document,
 			CancellationToken cancellationToken) {
 			ISignatureHelpProvider bestProvider = null;
@@ -40,7 +39,7 @@ namespace dnSpy.Roslyn.Internal.SignatureHelp {
 			foreach (var provider in providers) {
 				cancellationToken.ThrowIfCancellationRequested();
 
-				var currentItems = await provider.GetItemsAsync(document, caretPosition, triggerInfo, options, cancellationToken)
+				var currentItems = await provider.GetItemsAsync(document, caretPosition, triggerInfo, default(Microsoft.CodeAnalysis.MemberDisplayOptions), cancellationToken)
 												 .ConfigureAwait(false);
 				if (currentItems != null && currentItems.ApplicableSpan.IntersectsWith(caretPosition)) {
 					// If another provider provides sig help items, then only take them if they

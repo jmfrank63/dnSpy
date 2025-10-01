@@ -1,4 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
@@ -90,7 +90,7 @@ namespace dnSpy.Roslyn.Internal.SmartIndent.CSharp {
 				}
 			}
 
-			var smartTokenformattingRules = new SmartTokenFormattingRule().Concat(_formattingRules);
+			var smartTokenformattingRules = ImmutableArray.CreateRange(new SmartTokenFormattingRule().Concat(_formattingRules));
 			var adjustedStartPosition = previousToken.SpanStart;
 			if (token.IsKind(SyntaxKind.OpenBraceToken) && _options.IndentStyle != FormattingOptions2.IndentStyle.Smart) {
 				RoslynDebug.AssertNotNull(token.SyntaxTree);
@@ -127,11 +127,6 @@ namespace dnSpy.Roslyn.Internal.SmartIndent.CSharp {
 		}
 
 		private class SmartTokenFormattingRule : NoLineChangeFormattingRule {
-			public override void AddSuppressOperations(List<SuppressOperation> list, SyntaxNode node,
-				in NextSuppressOperationAction nextOperation) {
-				// don't suppress anything
-			}
-
 			public override AdjustSpacesOperation GetAdjustSpacesOperation(in SyntaxToken previousToken,
 				in SyntaxToken currentToken, in NextGetAdjustSpacesOperation nextOperation) {
 				var spaceOperation = base.GetAdjustSpacesOperation(in previousToken, in currentToken, in nextOperation);

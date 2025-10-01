@@ -3,12 +3,9 @@
 // See the LICENSE file in the project root for more information.
 
 using System;
-using Microsoft.CodeAnalysis.Shared.Extensions;
-using Microsoft.CodeAnalysis.Text;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods;
-using Roslyn.Utilities;
 
 namespace dnSpy.Roslyn.EditorFeatures.Extensions {
 	static class ITextSnapshotLineExtensions {
@@ -17,13 +14,13 @@ namespace dnSpy.Roslyn.EditorFeatures.Extensions {
 		/// the line is empty or contains only whitespace.
 		/// </summary>
 		public static int? GetFirstNonWhitespacePosition(this ITextSnapshotLine line) {
-			Contract.ThrowIfNull(line);
+			if (line == null) throw new System.ArgumentNullException(nameof(line));
 
 			var text = line.GetText();
 
-			for (var i = 0; i < text.Length; i++) {
+			for (int i = 0; i < text.Length; i++) {
 				if (!char.IsWhiteSpace(text[i])) {
-					return line.Start + i;
+					return line.Start.Position + i;
 				}
 			}
 
@@ -36,11 +33,12 @@ namespace dnSpy.Roslyn.EditorFeatures.Extensions {
 		/// whitespace.
 		/// </summary>
 		public static int? GetFirstNonWhitespaceOffset(this ITextSnapshotLine line) {
-			Contract.ThrowIfNull(line);
+			if (line == null) throw new System.ArgumentNullException(nameof(line));
+			if (line.Length == 0) throw new System.ArgumentException("Line cannot be empty");
 
 			var text = line.GetText();
 
-			for (var i = 0; i < text.Length; i++) {
+			for (int i = 0; i < text.Length; i++) {
 				if (!char.IsWhiteSpace(text[i])) {
 					return i;
 				}
@@ -53,15 +51,27 @@ namespace dnSpy.Roslyn.EditorFeatures.Extensions {
 		/// Returns the last non-whitespace position on the given line, or null if
 		/// the line is empty or contains only whitespace.
 		/// </summary>
-		public static int? GetLastNonWhitespacePosition(this ITextSnapshotLine line) =>
-			line.AsTextLine().GetLastNonWhitespacePosition();
+		public static int? GetLastNonWhitespacePosition(this ITextSnapshotLine line) {
+			if (line == null) throw new System.ArgumentNullException(nameof(line));
+			if (line.Length == 0) throw new System.ArgumentException("Line cannot be empty");
+
+			var text = line.GetText();
+
+			for (int i = text.Length - 1; i >= 0; i--) {
+				if (!char.IsWhiteSpace(text[i])) {
+					return line.Start.Position + i;
+				}
+			}
+
+			return null;
+		}
 
 		/// <summary>
 		/// Determines whether the specified line is empty or contains whitespace only.
 		/// </summary>
 		public static bool IsEmptyOrWhitespace(this ITextSnapshotLine line, int startIndex = 0, int endIndex = -1) {
-			Contract.ThrowIfNull(line, "line");
-			Contract.ThrowIfFalse(startIndex >= 0);
+			if (line == null) throw new System.ArgumentNullException(nameof(line));
+			if (startIndex < 0) throw new System.ArgumentException("startIndex must be >= 0", nameof(startIndex));
 
 			var text = line.GetText();
 
@@ -80,8 +90,8 @@ namespace dnSpy.Roslyn.EditorFeatures.Extensions {
 
 		public static ITextSnapshotLine GetPreviousMatchingLine(this ITextSnapshotLine line,
 			Func<ITextSnapshotLine, bool> predicate) {
-			Contract.ThrowIfNull(line, @"line");
-			Contract.ThrowIfNull(predicate, @"tree");
+			if (line == null) throw new System.ArgumentNullException(nameof(line));
+			if (predicate == null) throw new System.ArgumentNullException(nameof(predicate));
 
 			if (line.LineNumber <= 0) {
 				return null;
@@ -148,6 +158,49 @@ namespace dnSpy.Roslyn.EditorFeatures.Extensions {
 			}
 
 			return false;
+		}
+	}
+
+	// String extension methods for column calculations
+	static class StringExtensions {
+		public static int GetColumnOfFirstNonWhitespaceCharacterOrEndOfLine(this string text, int tabSize) {
+			int column = 0;
+			for (int i = 0; i < text.Length; i++) {
+				var ch = text[i];
+				if (!char.IsWhiteSpace(ch))
+					return column;
+				
+				if (ch == '\t')
+					column = (column / tabSize + 1) * tabSize;
+				else
+					column++;
+			}
+			return column;
+		}
+
+		public static int GetColumnFromLineOffset(this string text, int lineOffset, int tabSize) {
+			int column = 0;
+			for (int i = 0; i < Math.Min(lineOffset, text.Length); i++) {
+				if (text[i] == '\t')
+					column = (column / tabSize + 1) * tabSize;
+				else
+					column++;
+			}
+			return column;
+		}
+
+		public static int GetLineOffsetFromColumn(this string text, int column, int tabSize) {
+			int currentColumn = 0;
+			for (int i = 0; i < text.Length; i++) {
+				if (currentColumn >= column)
+					return i;
+				
+				if (text[i] == '\t')
+					currentColumn = (currentColumn / tabSize + 1) * tabSize;
+				else
+					currentColumn++;
+			}
+			return text.Length;
 		}
 	}
 }
