@@ -42,12 +42,7 @@
         }
       },
       "icsharpcode.decompiler": {
-        "type": "Project",
-        "dependencies": {
-          "ICSharpCode.NRefactory": "[1.0.0, )",
-          "ICSharpCode.NRefactory.CSharp": "[1.0.0, )",
-          "dnSpy.Contracts.Logic": "[6.5.1, )"
-        }
+        "type": "Project"
       },
       "icsharpcode.nrefactory": {
         "type": "Project",
@@ -63,13 +58,7 @@
         }
       },
       "icsharpcode.nrefactory.vb": {
-        "type": "Project",
-        "dependencies": {
-          "ICSharpCode.Decompiler": "[2.4.0, )",
-          "ICSharpCode.NRefactory": "[1.0.0, )",
-          "ICSharpCode.NRefactory.CSharp": "[1.0.0, )",
-          "dnSpy.Contracts.Logic": "[6.5.1, )"
-        }
+        "type": "Project"
       }
     },
     "net8.0-windows7.0": {
@@ -119,12 +108,7 @@
         }
       },
       "icsharpcode.decompiler": {
-        "type": "Project",
-        "dependencies": {
-          "ICSharpCode.NRefactory": "[1.0.0, )",
-          "ICSharpCode.NRefactory.CSharp": "[1.0.0, )",
-          "dnSpy.Contracts.Logic": "[6.5.1, )"
-        }
+        "type": "Project"
       },
       "icsharpcode.nrefactory": {
         "type": "Project",
@@ -140,13 +124,7 @@
         }
       },
       "icsharpcode.nrefactory.vb": {
-        "type": "Project",
-        "dependencies": {
-          "ICSharpCode.Decompiler": "[2.4.0, )",
-          "ICSharpCode.NRefactory": "[1.0.0, )",
-          "ICSharpCode.NRefactory.CSharp": "[1.0.0, )",
-          "dnSpy.Contracts.Logic": "[6.5.1, )"
-        }
+        "type": "Project"
       }
     }
   }
