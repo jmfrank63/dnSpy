@@ -18,7 +18,7 @@
 */
 
 namespace dnSpy.Decompiler.MSBuild {
-	public interface IMSBuildProgressListener {
+	interface IMSBuildProgressListener {
 		/// <summary>
 		/// Called to initialize max progress
 		/// </summary>
@@ -35,7 +35,7 @@ namespace dnSpy.Decompiler.MSBuild {
 		void SetProgress(int progress);
 	}
 
-	public sealed class NoMSBuildProgressListener : IMSBuildProgressListener {
+	sealed class NoMSBuildProgressListener : IMSBuildProgressListener {
 		public static readonly NoMSBuildProgressListener Instance = new NoMSBuildProgressListener();
 
 		public void SetMaxProgress(int maxProgress) { }
