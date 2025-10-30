@@ -27,7 +27,7 @@ using System.Threading.Tasks;
 using dnSpy.Decompiler.Properties;
 
 namespace dnSpy.Decompiler.MSBuild {
-	sealed class MSBuildProjectCreator {
+	public sealed class MSBuildProjectCreator {
 		readonly ProjectCreatorOptions options;
 		readonly List<Project> projects;
 		readonly IMSBuildProjectWriterLogger logger;
@@ -71,7 +71,7 @@ namespace dnSpy.Decompiler.MSBuild {
 			try {
 				var opts = new ParallelOptions {
 					CancellationToken = options.CancellationToken,
-					MaxDegreeOfParallelism = options.NumberOfThreads <= 0 ? Environment.ProcessorCount : options.NumberOfThreads,
+					MaxDegreeOfParallelism = options.NumberOfThreads <=0 ? Environment.ProcessorCount : options.NumberOfThreads,
 				};
 				var filenameCreator = new FilenameCreator(options.Directory);
 				var ctx = new DecompileContext(options.CancellationToken, logger);
