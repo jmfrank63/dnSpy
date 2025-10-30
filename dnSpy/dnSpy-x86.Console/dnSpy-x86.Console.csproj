@@ -1,10 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-<!-- Target dir is the same as dnSpy.exe so we'll overwrite some files when creating
-a self-contained .NET app (System.Security.Permissions (wrong lower version), WindowsBase
-(wrong file (15KB, should be 1.1MB))).
-
-The workaround is to add WindowsDesktop above.
--->
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<!-- x86 Console version of dnSpy -->
 
   <Import Project="..\..\DnSpyCommon.props" />
 
@@ -18,28 +13,17 @@ The workaround is to add WindowsDesktop above.
     <OutputPath>..\dnSpy\bin\$(Configuration)\</OutputPath>
     <Nullable>enable</Nullable>
 
-    <RuntimeIdentifiers>$(DnSpyRuntimeIdentifiers)</RuntimeIdentifiers>
-    <OutputType>Exe</OutputType>
-    <Prefer32Bit>false</Prefer32Bit>
+    <!-- Force x86 architecture -->
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+    <OutputType>Exe</OutputType>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
     <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
-  </PropertyGroup>
-
-  <!-- Set different assembly names for x86 builds to distinguish from 64-bit version -->
-  <PropertyGroup Condition="'$(RuntimeIdentifier)' == 'win-x86' OR '$(PlatformTarget)' == 'x86' OR '$(Platform)' == 'x86'">
+    
+    <!-- Set the assembly name to distinguish from 64-bit version -->
     <AssemblyName>dnSpy-x86.Console</AssemblyName>
   </PropertyGroup>
-
-  <!-- Debug target to help us understand what's happening during build -->
-  <Target Name="DebugBuildProperties" BeforeTargets="CoreCompile">
-    <Message Text="RuntimeIdentifier: $(RuntimeIdentifier)" Importance="high" />
-    <Message Text="PlatformTarget: $(PlatformTarget)" Importance="high" />
-    <Message Text="Platform: $(Platform)" Importance="high" />
-    <Message Text="AssemblyName: $(AssemblyName)" Importance="high" />
-    <Message Text="OutputPath: $(OutputPath)" Importance="high" />
-  </Target>
 
   <ItemGroup>
     <Compile Include="..\dnSpy\MainApp\DotNetAssemblyLoader.cs" Link="DotNetAssemblyLoader.cs" />
@@ -61,7 +45,7 @@ The workaround is to add WindowsDesktop above.
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\dnSpy\app.config" Condition=" '$(IsDotNetFramework)' == 'true' ">
+    <None Include="..\dnSpy\app.config" Condition=" '$(IsDotNetFramework)' == 'true' " >
       <Link>app.config</Link>
     </None>
     <None Include="..\dnSpy\app.manifest">

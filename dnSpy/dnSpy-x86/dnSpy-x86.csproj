@@ -15,7 +15,7 @@
     <RuntimeIdentifiers>$(DnSpyRuntimeIdentifiers)</RuntimeIdentifiers>
     <OutputType>WinExe</OutputType>
     <Prefer32Bit>true</Prefer32Bit>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
   </PropertyGroup>
 
@@ -25,7 +25,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\dnSpy\app.config" Condition=" '$(IsDotNetFramework)' == 'true' " >
+    <None Include="..\dnSpy\app.config" Condition=" '$(IsDotNetFramework)' == 'true' ">
       <Link>app.config</Link>
     </None>
     <None Include="..\dnSpy\app.manifest">
