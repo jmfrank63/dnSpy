@@ -976,7 +976,7 @@ namespace dnSpy_Console {
 			return proj;
 		}
 
-		IDecompiler GetLanguage() => GetLanguageOrNull() ?? throw new InvalidOperationException();
+		IDecompiler GetLanguage() => GetLanguageOrNull() ?? throw new ErrorException(allLanguages.Length == 0 ? dnSpy_Console_Resources.NoLanguagesFound : string.Format(dnSpy_Console_Resources.LanguageXDoesNotExist, language));
 		IDecompiler? GetLanguageOrNull() {
 			bool hasGuid = Guid.TryParse(language, out var guid);
 			return AllLanguages.FirstOrDefault(a => {

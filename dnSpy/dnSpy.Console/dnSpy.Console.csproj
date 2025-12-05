@@ -1,11 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-<!-- Target dir is the same as dnSpy.exe so we'll overwrite some files when creating
-a self-contained .NET app (System.Security.Permissions (wrong lower version), WindowsBase
-(wrong file (15KB, should be 1.1MB))).
-
-The workaround is to add WindowsDesktop above for .NET Framework and net8.0-windows.
-For net10.0, we use the standard SDK without WPF/WinForms.
--->
+<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\DnSpyCommon.props" />
 
@@ -24,14 +17,14 @@ For net10.0, we use the standard SDK without WPF/WinForms.
     <Prefer32Bit>false</Prefer32Bit>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
-    <TargetFrameworks>net48;net8.0-windows;net10.0</TargetFrameworks>
+    <TargetFrameworks>net48;net8.0-windows;net10.0-windows</TargetFrameworks>
     
     <!-- Disable "Press any key to continue" prompt when debugging -->
     <NoWarn>$(NoWarn);CS8002</NoWarn>
   </PropertyGroup>
 
   <!-- Enable WPF/WinForms only for Windows-specific targets -->
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net48' Or '$(TargetFramework)' == 'net8.0-windows'">
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net48' Or '$(TargetFramework)' == 'net8.0-windows' Or '$(TargetFramework)' == 'net10.0-windows'">
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
