@@ -43,7 +43,8 @@
     <!-- WFAC010: Prevent warning about app.manifest properties -->
     <!-- NU1702: ProjectReference resolved using different TFM -->
     <!-- MC1000, MC3050, MC3072, MC3074: XAML designer warnings (design-time only) -->
-    <NoWarn>NU1701;AD0001;WFAC010;NETSDK1189;NU1702;MC1000;MC3050;MC3072;MC3074</NoWarn>
+    <!-- WFO0003: High DPI settings in manifest required for .NET Framework support -->
+    <NoWarn>NU1701;AD0001;WFAC010;NETSDK1189;NU1702;MC1000;MC3050;MC3072;MC3074;WFO0003</NoWarn>
     <NoWarn Condition=" '$(IsDotNetFramework)' == 'true' ">$(NoWarn);CS8767</NoWarn>
 
     <!-- Update app.config whenever some of these versions change (eg. dnlib version) -->

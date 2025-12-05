@@ -85,7 +85,13 @@ namespace dnSpy.Debugger.DotNet.CorDebug.Impl {
 						return false;
 					stream.Position = stream.Length - bundleSig.Length;
 					var sig = new byte[bundleSig.Length];
-					stream.Read(sig, 0, sig.Length);
+					int offset = 0;
+					while (offset < sig.Length) {
+						int read = stream.Read(sig, offset, sig.Length - offset);
+						if (read == 0)
+							return false;
+						offset += read;
+					}
 					for (int i = 0; i < sig.Length; i++) {
 						if (bundleSig[i] != sig[i])
 							return false;
